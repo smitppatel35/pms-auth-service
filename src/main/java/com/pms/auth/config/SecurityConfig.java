@@ -50,6 +50,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/auth/users").permitAll()
                 .antMatchers("/auth/login").permitAll()
                 .antMatchers("/h2/**").permitAll()
+                .antMatchers("/auth/hello").hasAuthority("REP")
                 .anyRequest().authenticated()
                 .and()
                 .exceptionHandling().authenticationEntryPoint(entryPoint)

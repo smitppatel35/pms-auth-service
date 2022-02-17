@@ -33,12 +33,12 @@ public class DatabaseTestConfig {
 
     private void user2() {
         List<String> list = new ArrayList<>();
-        list.add("CUSTOMER");
+        list.add("REP");
 
         User user = new User();
 
         user.setId(utils.generateRandomUUID());
-        user.setUsername("customer-1");
+        user.setUsername("rep2");
         user.setPassword(passwordEncoder.encode("1234"));
         user.setAccountNonExpired(true);
         user.setEnabled(true);
@@ -51,12 +51,12 @@ public class DatabaseTestConfig {
 
     private void user1() {
         List<String> list = new ArrayList<>();
-        list.add("ADMIN");
+        list.add("REP");
 
         User user = new User();
 
         user.setId(utils.generateRandomUUID());
-        user.setUsername("admin");
+        user.setUsername("rep6");
         user.setPassword(passwordEncoder.encode("1234"));
         user.setAccountNonExpired(true);
         user.setEnabled(true);

@@ -28,7 +28,7 @@ public class JWTUtils {
         return Jwts.builder()
                 .setHeaderParam("token", "jwt")
                 .setClaims(claims)
-                .setSubject(userDetails.getId())
+                .setSubject(userDetails.getUsername())
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY))
                 .signWith(SIGNATURE_ALGORITHM, SECRET)
